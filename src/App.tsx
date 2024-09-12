@@ -6,23 +6,32 @@ import { AuthProvider } from './contexts/AuthContext'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Cadastro from './pages/cadastro/Cadastro'
+import ResetSenha from './pages/resetSenha/ResetSenha'
+import InputOTP from './pages/resetSenha/InputOTP'
+import { EmailProvider } from './contexts/EmailContext'
+import RedefinirSenha from './pages/resetSenha/RedefinirSenha'
 
 export default function App() {
 
   return (
     <>
       <AuthProvider>
-        <ToastContainer />
-        <BrowserRouter>
-          <div className='bg-black'>
-            <Routes>
-              <Route path="/" element={<Login />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/cadastro" element={<Cadastro />} />
-              <Route path="/home" element={<Home />} />
-            </Routes>
-          </div>
-        </BrowserRouter>
+        <EmailProvider>
+          <ToastContainer />
+          <BrowserRouter>
+            <div className='bg-black'>
+              <Routes>
+                <Route path="/" element={<Login />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/cadastro" element={<Cadastro />} />
+                <Route path="/forgot-password" element={<ResetSenha />} />
+                <Route path="/input-otp" element={<InputOTP />} />
+                <Route path="/new-password" element={<RedefinirSenha />} />
+                <Route path="/home" element={<Home />} />
+              </Routes>
+            </div>
+          </BrowserRouter>
+        </EmailProvider>
       </AuthProvider>
     </>
   )

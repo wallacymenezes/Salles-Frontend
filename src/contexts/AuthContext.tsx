@@ -26,7 +26,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
     senha: "",
     foto: "",
     token: "",
-    cargo: "",
+    cargo: {
+      id: 2,
+      nome: "VENDEDOR"
+    },
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -67,7 +70,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
         senha: "",
         foto: "",
         token: "",
-        cargo: "",
+        cargo: {
+          id: 2,
+          nome: "VENDEDOR"
+        }
     });
     localStorage.removeItem('authToken');
   }

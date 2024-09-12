@@ -85,7 +85,7 @@ export default function Login() {
             <div className="space-y-2">
               <div className="flex items-center">
                 <Label htmlFor="password">Senha</Label>
-                <Link to="#" className="ml-auto text-xs underline lg:text-sm">
+                <Link to="/forgot-password" className="ml-auto text-xs underline lg:text-sm">
                   Esqueceu sua senha?
                 </Link>
               </div>
