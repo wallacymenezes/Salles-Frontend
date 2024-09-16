@@ -1,5 +1,3 @@
-import Usuario from "./Usuario";
-
 export enum TipoCliente {
     PF = "PF",
     PJ = "PJ",
@@ -24,7 +22,7 @@ export interface Venda {
     valorVenda: number;
     statusVenda: StatusVenda;
     observacoes?: string;
-    vendedor: Usuario;
+    vendedor: string;
     tipoCliente: TipoCliente;
     cnpj?: string;
   }

@@ -10,6 +10,8 @@ import ResetSenha from './pages/resetSenha/ResetSenha'
 import InputOTP from './pages/resetSenha/InputOTP'
 import { EmailProvider } from './contexts/EmailContext'
 import RedefinirSenha from './pages/resetSenha/RedefinirSenha'
+import Vendas from './pages/vendas/Vendas'
+import FormVenda from './pages/formVenda/FormVenda'
 
 export default function App() {
 
@@ -28,6 +30,8 @@ export default function App() {
                 <Route path="/input-otp" element={<InputOTP />} />
                 <Route path="/new-password" element={<RedefinirSenha />} />
                 <Route path="/home" element={<Home />} />
+                <Route path="/vendas" element={<Vendas />} />
+                <Route path="/cadastrar" element={<FormVenda />} />
               </Routes>
             </div>
           </BrowserRouter>
