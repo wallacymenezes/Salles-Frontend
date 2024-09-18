@@ -25,6 +25,7 @@ import DeleteVenda from "@/components/venda/deleteVenda/DeleteVenda";
 import { useNavigate } from "react-router-dom";
 
 function Vendas() {
+  
   const [vendas, setVendas] = useState<Venda[]>([]);
   const { usuario } = useContext(AuthContext);
   const token = usuario?.token;
@@ -104,7 +105,7 @@ function Vendas() {
                 Nova Venda
             </Button>
         </div>
-        <div className="w-[95%]">
+        <div className="w-[80%]">
           <Card className="dark">
             <CardHeader className="px-7">
               <CardDescription>

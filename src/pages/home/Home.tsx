@@ -13,7 +13,7 @@ export default function Home() {
       navigate("/login");
     }
   }, [authenticated, navigate]);
-
+  
   return (
     <div className="min-h-screen flex">
       <Sidebar />
